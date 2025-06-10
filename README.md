@@ -42,6 +42,26 @@ Includes:
 - `README.txt`
 
 ---
+## 🔨 Universal Build Script
+
+To build a Universal macOS `.app` (Intel + Apple Silicon), run:
+
+```bash
+python build_universal.py
+```
+
+This script:
+
+- Builds both `x86_64` and `arm64` versions using PyInstaller
+- Merges them into a Universal Binary using `lipo`
+- Packages the final `.app` into a `.zip` file
+
+**Requirements:**
+
+- Python 3.11 (installed for both x86_64 and arm64)
+- PyInstaller installed on both architectures
+- macOS environment with Rosetta (to run `arch -x86_64` on Apple Silicon)
+
 
 ## 🆕 Update History
 
